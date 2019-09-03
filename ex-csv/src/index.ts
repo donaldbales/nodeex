@@ -10,7 +10,6 @@ const moduleName: string = 'index';
 // A main method with no command line parameter management
 async function main(): Promise<any> {
   const methodName: string = 'main';
-
   logger.info({ moduleName, methodName }, `Starting...`);
 
   const csvData: any = await exCsv.readCSV(logger);

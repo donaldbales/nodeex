@@ -11,8 +11,7 @@ const moduleName: string = 'index';
 // https://www.weather.gov/documentation/services-web-api
 async function forecast(url: string): Promise<any> {
   const methodName: string = 'forecast';
-
-  logger.info(`${moduleName}#${methodName}`);
+  logger.info({ moduleName, methodName }, `Starting...`);
 
   let results: any = {};
   let response: any = {};
@@ -24,13 +23,13 @@ async function forecast(url: string): Promise<any> {
   };
   try {
     response = await axios.get(url, options);
-    logger.info(`${moduleName}#${methodName}: response=\n${inspect(response)}`);
+    logger.info({ moduleName, methodName }, `response=\n${inspect(response)}`);
 
     results = response.data ? response.data : {};
-    logger.info(`${moduleName}#${methodName}: results=\n${inspect(results)}`);
+    logger.info({ moduleName, methodName }, `results=\n${inspect(results)}`);
     return results;
-  } catch (error) {
-    logger.error(`${moduleName}#${methodName}: error=\n${inspect(error)}`);
+  } catch (err) {
+    logger.error({ moduleName, methodName, err });
     return results;
   }
 }
@@ -38,12 +37,11 @@ async function forecast(url: string): Promise<any> {
 // A main method with no command line parameter management
 async function main(): Promise<any> {
   const methodName: string = 'main';
-
-  logger.info(`${moduleName}#${methodName}: Starting...`);
+  logger.info({ moduleName, methodName }, `Starting...`);
 
   const unUsedLocal: any = await forecast('https://api.weather.gov/zones/forecast/ILZ013/forecast');
 
-  logger.info(`${moduleName}#${methodName}: Ending.`);
+  logger.info({ moduleName, methodName }, `Ending.`);
 }
 
 // Start the program
