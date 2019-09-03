@@ -1,0 +1,20 @@
+{
+  "name": "ex-emailer",
+  "version": "1.0.0",
+  "description": "A Node example program to send email",
+  "main": "index.js",
+  "scripts": {
+    "build": "find ./src -name \\*.js -type f -exec rm {} \\; && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald J. Bales",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@types/node": "^10.14.17",
+    "@types/nodemailer": "^4.6.6",
+    "nodemailer": "^5.1.1",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^2.9.2"
+  }
+}

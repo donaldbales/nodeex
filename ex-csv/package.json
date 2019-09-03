@@ -1,0 +1,19 @@
+{
+  "name": "ex-csv",
+  "version": "1.0.0",
+  "description": "An example of using csv to parse a text file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald J. Bales",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@types/node": "^10.14.17",
+    "csv": "^5.1.2",
+    "ex-logger": "file:../ex-logger",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^2.9.2"
+  }
+}
