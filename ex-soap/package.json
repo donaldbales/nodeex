@@ -14,7 +14,7 @@
     "@types/soap": "^0.21.0",
     "ex-logger": "file:../ex-logger",
     "node": "^10.14.1",
-    "soap": "^0.26.0",
+    "soap": "^0.45.0",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2"
   }
